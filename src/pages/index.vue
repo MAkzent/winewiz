@@ -22,18 +22,12 @@ export default {
     Logo
   },
   data: () => ({}),
-  async mounted() {
-    console.log(await this.grabbingWiz())
-  },
+  async beforeMount() {},
   methods: {
     async grabbingWiz() {
-      this.$axios.setHeader('Access-Control-Allow-Origin', '*')
       this.$axios.setHeader('Content-Type', 'application/json')
-      this.$axios.setHeader(
-        'x-api-token',
-        `${this.$env.ALCHEMY}`
-      )
-      this.$axios.setHeader('x-email', `${this.$env.EMAIL}`)
+      this.$axios.setHeader('x-api-token', `${process.env.ALCHEMY}`)
+      this.$axios.setHeader('x-email', `${process.env.EMAIL}`)
       const res = await this.$axios.get(
         'https://cheezewizards.alchemyapi.io/wizards/'
       )

@@ -1,6 +1,13 @@
 import wizardList from '~/assets/data/wizardList.json'
 
 export default class WizardListService {
+  constructor(axios) {
+    this.axios = axios
+    this.axios.setHeader('Content-Type', 'application/json')
+    this.axios.setHeader('x-api-token', `${process.env.ALCHEMY}`)
+    this.axios.setHeader('x-email', `${process.env.EMAIL}`)
+  }
+
   _generateWizMap() {
     const wizMap = {}
     wizardList.forEach(wiz => {

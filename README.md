@@ -2,6 +2,12 @@
 
 > Get some Wine with your Cheeze
 
+# To Do
+- Add Vuex Store
+- Make API calls over Vuex
+- Build function to water the state every 5min
+- Build button in header to refresh on demand
+
 ## Build Setup
 
 ``` bash
