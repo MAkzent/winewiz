@@ -22,7 +22,7 @@
     "chart.js": "^2.8.0",
     "cross-env": "^5.2.0",
     "dotenv": "^8.0.0",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "knex": "^0.19.0",
     "mssql": "^5.1.0",
     "node-sass": "^4.12.0",
